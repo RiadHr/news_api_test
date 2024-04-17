@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   Widget buildArticle(Article article){
     return Card(
       child: ListTile(
-      leading: SizedBox(width: 80,child: Image.network("${article.urlToImage == null ? CircularProgressIndicator() : article.urlToImage }")),
+      leading: SizedBox(width: 80,child: Image.network("${article.urlToImage ?? CircularProgressIndicator() }")),
       title: Text("${article.title}"),
     ),);
   }
